@@ -6,6 +6,6 @@
 //  Copyright (c) 2013 Steeve Fong. All rights reserved.
 //
 
-#define COLORLISTURL @"http://www.colourlovers.com/api/colors?format=json"
+#define COLORLISTURL @"http://www.colourlovers.com/api/colors/new?format=json"
 #define networkNotificationActivityOn()  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES]
 #define networkNotificationActivityOff() [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO]

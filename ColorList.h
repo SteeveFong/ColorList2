@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ColorList : NSObject
-
+@property (strong, nonatomic) NSArray * myColorList;
 @end

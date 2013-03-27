@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "ColorListVC.h"
 
 @implementation AppDelegate
 
@@ -16,8 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    ColorListVC * mainView = [[ColorListVC alloc] initWithNibName:@"ColorListVC" bundle:nil];
+    
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mainView];
+    
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
 }
