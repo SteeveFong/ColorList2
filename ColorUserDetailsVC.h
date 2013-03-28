@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class User;
 
 @interface ColorUserDetailsVC : UIViewController
+
+- (id)initWithUserName:(NSString *)userName;
+- (void)fetchEntries:(NSString *)urlStr;
+- (void)inputValues:(User *)values;
 
 @end

@@ -25,6 +25,9 @@
 		6C1B98381702BF5E006D0C32 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B98371702BF5E006D0C32 /* Color.m */; };
 		6C6F1E321702DB04005B6F76 /* ColorDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E301702DB04005B6F76 /* ColorDetailsVC.m */; };
 		6C6F1E331702DB04005B6F76 /* ColorDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E311702DB04005B6F76 /* ColorDetailsVC.xib */; };
+		6C6F1E4517042E3F005B6F76 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E4417042E3F005B6F76 /* User.m */; };
+		6C6F1E49170430FC005B6F76 /* ColorUserDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */; };
+		6C6F1E4A170430FC005B6F76 /* ColorUserDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,11 @@
 		6C6F1E2F1702DB04005B6F76 /* ColorDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDetailsVC.h; sourceTree = "<group>"; };
 		6C6F1E301702DB04005B6F76 /* ColorDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorDetailsVC.m; sourceTree = "<group>"; };
 		6C6F1E311702DB04005B6F76 /* ColorDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorDetailsVC.xib; sourceTree = "<group>"; };
+		6C6F1E4317042E3F005B6F76 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6C6F1E4417042E3F005B6F76 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		6C6F1E46170430FC005B6F76 /* ColorUserDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUserDetailsVC.h; sourceTree = "<group>"; };
+		6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUserDetailsVC.m; sourceTree = "<group>"; };
+		6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorUserDetailsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +87,10 @@
 			children = (
 				6C1B98231702B21A006D0C32 /* Constants.h */,
 				29A565A19C4D43F98313A92E /* Pods.xcconfig */,
+				6C1B98071702B1A1006D0C32 /* Supporting Files */,
 				6C1B98061702B1A1006D0C32 /* ColorList2 */,
 				6C1B97FF1702B1A1006D0C32 /* Frameworks */,
-				6C1B98251702BAB3006D0C32 /* Helpers */,
-				6C1B98291702BC01006D0C32 /* Model */,
 				6C1B97FE1702B1A1006D0C32 /* Products */,
-				6C1B982A1702BC0E006D0C32 /* View */,
-				6C1B98241702B9FB006D0C32 /* ViewController */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +118,10 @@
 			children = (
 				6C1B980F1702B1A1006D0C32 /* AppDelegate.h */,
 				6C1B98101702B1A1006D0C32 /* AppDelegate.m */,
-				6C1B98071702B1A1006D0C32 /* Supporting Files */,
+				6C1B98251702BAB3006D0C32 /* Helpers */,
+				6C1B98291702BC01006D0C32 /* Model */,
+				6C1B982A1702BC0E006D0C32 /* View */,
+				6C1B98241702B9FB006D0C32 /* ViewController */,
 			);
 			path = ColorList2;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 				6C1B98161702B1A1006D0C32 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = ColorList2;
 			sourceTree = "<group>";
 		};
 		6C1B98241702B9FB006D0C32 /* ViewController */ = {
@@ -141,8 +150,12 @@
 				6C6F1E2F1702DB04005B6F76 /* ColorDetailsVC.h */,
 				6C6F1E301702DB04005B6F76 /* ColorDetailsVC.m */,
 				6C6F1E311702DB04005B6F76 /* ColorDetailsVC.xib */,
+				6C6F1E46170430FC005B6F76 /* ColorUserDetailsVC.h */,
+				6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */,
+				6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */,
 			);
 			name = ViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		6C1B98251702BAB3006D0C32 /* Helpers */ = {
@@ -152,6 +165,7 @@
 				6C1B98271702BAD8006D0C32 /* UIColor+hexToColor.m */,
 			);
 			name = Helpers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		6C1B98291702BC01006D0C32 /* Model */ = {
@@ -159,8 +173,11 @@
 			children = (
 				6C1B98361702BF5E006D0C32 /* Color.h */,
 				6C1B98371702BF5E006D0C32 /* Color.m */,
+				6C6F1E4317042E3F005B6F76 /* User.h */,
+				6C6F1E4417042E3F005B6F76 /* User.m */,
 			);
 			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		6C1B982A1702BC0E006D0C32 /* View */ = {
@@ -171,6 +188,7 @@
 				6C1B98341702BD4C006D0C32 /* ColorCell.xib */,
 			);
 			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +250,7 @@
 				6C1B981D1702B1A1006D0C32 /* ColorListVC.xib in Resources */,
 				6C1B98351702BD4C006D0C32 /* ColorCell.xib in Resources */,
 				6C6F1E331702DB04005B6F76 /* ColorDetailsVC.xib in Resources */,
+				6C6F1E4A170430FC005B6F76 /* ColorUserDetailsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +285,8 @@
 				6C1B98331702BD30006D0C32 /* ColorCell.m in Sources */,
 				6C1B98381702BF5E006D0C32 /* Color.m in Sources */,
 				6C6F1E321702DB04005B6F76 /* ColorDetailsVC.m in Sources */,
+				6C6F1E4517042E3F005B6F76 /* User.m in Sources */,
+				6C6F1E49170430FC005B6F76 /* ColorUserDetailsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+hexToColor.h"
+#import "ColorUserDetailsVC.h"
 #import "ColorDetailsVC.h"
 #import "Color.h"
 
@@ -21,7 +22,7 @@
     return self;
 }
 
--(id)initWithColor:(NSDictionary *)currentColor
+-(id)initWithColor:(Color *)currentColor
 {
     self = [super init];
     
@@ -36,12 +37,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[self navigationController] setNavigationBarHidden:NO];
     
-    [_descriptionLabel setText:_myColor[@"userName"]];
-    [_titleLabel setText:_myColor[@"title"]];
-    [_hexColorLabel setText:_myColor[@"hex"]];
-    [_colorView setBackgroundColor:[UIColor colorFromHexString:_myColor[@"hex"]]];
-    [_hexColorLabel setTextColor:[UIColor invertedColorFromHexString:_myColor[@"hex"]]];
+    [_descriptionLabel setText:_myColor.description];
+    [_titleLabel setText:_myColor.title];
+    [_hexColorLabel setText:_myColor.colorHex];
+    [_colorView setBackgroundColor:[UIColor colorFromHexString:_myColor.colorHex]];
+    [_hexColorLabel setTextColor:[UIColor invertedColorFromHexString:_myColor.colorHex]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,4 +51,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)userDetails:(id)sender {
+    ColorUserDetailsVC *vc = [[ColorUserDetailsVC alloc] initWithUserName:_descriptionLabel.text];
+    
+    [[self navigationController] pushViewController:vc animated:YES];
+}
+
 @end

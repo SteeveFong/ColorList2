@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Steeve Fong. All rights reserved.
 //
 
-#import "UIColor+hexToColor.h"
 #import "ColorDetailsVC.h"
 #import "ColorListVC.h"
 #import "ColorCell.h"
@@ -14,37 +13,41 @@
 #import "Constants.h"
 #import "Color.h"
 
-#import <SVProgressHUD/SVProgressHUD.h>
-#import <AFNetworking/AFNetworking.h>
-#import <SBJson/SBJson.h>
-
 @interface ColorListVC ()
     @property (strong, nonatomic) IBOutlet UITableView * myTable;
-
-    @property (strong, nonatomic) AFJSONRequestOperation * jsonRequest;
-    @property (strong, nonatomic) SBJsonParser * jsonParser;
-    @property (strong, nonatomic) ColorList * colorList;
-    
-    @property (strong, nonatomic) NSURL * url;
-    @property (strong, nonatomic) NSData * jsonData;
-    @property (strong, nonatomic) NSURLRequest * req;
-    @property (strong, nonatomic) NSArray * myColorList;
+    @property (strong, nonatomic) IBOutlet UISearchBar * mySearchBar;
 @end
 
 @implementation ColorListVC
+{
+    NSMutableArray * myColorListItems;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    myColorListItems = [[NSMutableArray alloc] init];
+    
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self navigationController] setNavigationBarHidden:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [self fetchEntries];
 
+    if ([Color count] == 0) {
+        [self fetchEntries:COLORLISTURL];
+    }
+    else {
+        [myColorListItems addObjectsFromArray:[Color allRecords]];
+        [_myTable reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,33 +56,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fetchEntries
+- (void)fetchEntries:(NSString *) urlStr
 {
-    _url = [NSURL URLWithString:COLORLISTURL];
-    _req = [NSURLRequest requestWithURL:_url];
+    NSURL        * url = [NSURL URLWithString:urlStr];
+    NSURLRequest * req = [NSURLRequest requestWithURL:url];
     
-    _jsonRequest = [AFJSONRequestOperation
-                    JSONRequestOperationWithRequest:_req
+    AFJSONRequestOperation * jsonRequest = [AFJSONRequestOperation
+                    JSONRequestOperationWithRequest:req
                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
                     {
-                        _myColorList = (NSArray *) JSON;
+                        [myColorListItems removeAllObjects];
+                        [Color dropAllRecords];
+                        
+                        for (NSDictionary * row in JSON) {                            
+                            Color * color = [[Color newRecord] initWithDict:row];
+                            [color save];
+
+                            [myColorListItems addObject:color];
+                        }
                         [_myTable reloadData];
                         [SVProgressHUD showSuccessWithStatus:@"Done"];
                     }
         
                     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
                     {
-                        
+                        [SVProgressHUD showErrorWithStatus:error.description];
                     }];
-    if (! _myColorList) {
         [SVProgressHUD showWithMaskType:2];
-        [_jsonRequest start];
-    }
+        [jsonRequest start];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_myColorList count];
+    return [myColorListItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,19 +100,38 @@
         cell = [[ColorCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    NSDictionary * currentColor = _myColorList[indexPath.row];
+    Color * currentColor;
     
-    [cell setCellFromColorList:currentColor];
+    currentColor = myColorListItems[indexPath.row];
+    
+    cell = [cell initFromColor:currentColor];
         
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary * currentColor = _myColorList[indexPath.row];
+    Color * currentColor = myColorListItems[indexPath.row];
     ColorDetailsVC *detailViewController = [[ColorDetailsVC alloc] initWithColor:currentColor];
     
     [[self navigationController] pushViewController:detailViewController animated:YES];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    if ([_mySearchBar isFirstResponder]) {
+        [_mySearchBar resignFirstResponder];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self filterContentForSearchText:_mySearchBar.text];
+}
+
+- (void)filterContentForSearchText:(NSString *)searchText
+{
+    [self fetchEntries:[NSString stringWithFormat:@"%@&keywords=%@", COLORLISTURL, searchText]];
 }
 
 @end

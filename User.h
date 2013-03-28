@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserDetails : NSObject
+@interface User : ActiveRecord
+@property (strong, nonatomic) NSString * userName;
+@property (strong, nonatomic) NSString * location;
+@property (strong, nonatomic) NSString * rating;
+@property (strong, nonatomic) NSString * numColors;
+
+- (id)initUserWithDict:(NSDictionary *)dict;
+- (id)initUserWithArray:(NSArray *)array;
 
 @end

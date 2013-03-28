@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Color;
 @interface ColorCell : UITableViewCell
+
 @property (strong, nonatomic) IBOutlet UILabel * titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel * descriptionLabel;
 @property (strong, nonatomic) IBOutlet UIView * colorView;
 
-- (void)setCellFromColorList:(NSDictionary *) currentColor;
+- (id)initFromColor:(Color *)currentColor;
+
 @end

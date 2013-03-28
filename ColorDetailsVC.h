@@ -10,11 +10,14 @@
 @class Color;
 
 @interface ColorDetailsVC : UIViewController
-@property (strong, nonatomic) IBOutlet UIView * colorView;
-@property (strong, nonatomic) IBOutlet UILabel * titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel * hexColorLabel;
-@property (strong, nonatomic) IBOutlet UILabel * descriptionLabel;
-@property (strong, nonatomic) NSDictionary * myColor;
+@property (weak, nonatomic) IBOutlet UIView * colorView;
+@property (weak, nonatomic) IBOutlet UILabel * titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * hexColorLabel;
+@property (weak, nonatomic) IBOutlet UILabel * descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *userButton;
 
--(id)initWithColor:(NSDictionary *)currentColor;
+@property (strong, nonatomic) Color * myColor;
+
+-(id)initWithColor:(Color *)currentColor;
+
 @end

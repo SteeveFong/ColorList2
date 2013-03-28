@@ -11,4 +11,8 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <iActiveRecord/ActiveRecord.h>
+    #import <SVProgressHUD/SVProgressHUD.h>
+    #import <AFNetworking/AFNetworking.h>
+    #import <SBJson/SBJson.h>
 #endif

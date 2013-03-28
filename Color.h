@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Color : NSObject
+@interface Color : ActiveRecord
 @property (strong, nonatomic) NSString * description;
 @property (strong, nonatomic) NSString * title;
 @property (strong, nonatomic) NSString * colorHex;
+
+- (id)initWithDict:(NSDictionary *)currentColor;
 @end
 

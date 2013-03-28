@@ -11,11 +11,10 @@
 @class SBJsonParser;
 @class ColorList;
 
-@protocol SBJsonStreamParserDelegate;
-
 @interface ColorListVC : UIViewController
-<UITableViewDelegate, UITableViewDataSource, SBJsonStreamParserDelegate>
+<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
-- (void)fetchEntries;
+- (void)fetchEntries:(NSString *) urlStr;
+- (void)filterContentForSearchText:(NSString *) searchText;
 
 @end

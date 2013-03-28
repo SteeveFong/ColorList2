@@ -8,6 +8,22 @@
 
 #import "Color.h"
 
+@interface Color ()
+
+@end
+
 @implementation Color
 
+-(id)initWithDict:(NSDictionary *)currentColor
+{
+    self = [super init];
+    
+    if (self) {
+        self.id      = currentColor[@"id"];
+        _description = currentColor[@"userName"];
+        _title       = currentColor[@"title"];
+        _colorHex    = currentColor[@"hex"];
+    }
+    return self;
+}
 @end
