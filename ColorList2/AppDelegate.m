@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ColorListVC.h"
+#import "PaletteListVC.h"
 
 @implementation AppDelegate
 
@@ -16,11 +17,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    ColorListVC * mainView = [[ColorListVC alloc] initWithNibName:@"ColorListVC" bundle:nil];
+    ColorListVC * mainView   = [[ColorListVC alloc] initWithNibName:@"ColorListVC" bundle:nil];
+    PaletteListVC *paletteVw = [[PaletteListVC alloc] init];
     
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mainView];
+    UINavigationController * nav2 = [[UINavigationController alloc] initWithRootViewController:paletteVw];
     
-    self.window.rootViewController = nav;
+    UITabBarController * tabBar = [[UITabBarController alloc] init];
+    
+    [tabBar setViewControllers:@[nav, nav2] animated:YES];
+    
+    self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     return YES;
 }

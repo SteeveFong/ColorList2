@@ -13,6 +13,8 @@
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
 			<string>IBUISearchBar</string>
+			<string>IBUITabBar</string>
+			<string>IBUITabBarItem</string>
 			<string>IBUITableView</string>
 			<string>IBUIView</string>
 		</array>
@@ -57,7 +59,7 @@
 						<float key="IBUISectionHeaderHeight">25</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUISearchBar" id="631052728">
+					<object class="IBUISearchBar" id="502737033">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{320, 44}</string>
@@ -70,6 +72,31 @@
 						<object class="IBUITextInputTraits" key="IBTextInputTraits">
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+					</object>
+					<object class="IBUITabBar" id="607992117">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483382</int>
+						<string key="NSFrame">{{0, 411}, {320, 49}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwAA</bytes>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<array class="NSMutableArray" key="IBUIItems">
+							<object class="IBUITabBarItem" id="136193824">
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUITabBar" ref="607992117"/>
+								<int key="IBUISystemItemIdentifier">1</int>
+							</object>
+							<object class="IBUITabBarItem" id="743766029">
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUITabBar" ref="607992117"/>
+								<int key="IBUISystemItemIdentifier">0</int>
+							</object>
+						</array>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -127,7 +154,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">mySearchBar</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="631052728"/>
+						<reference key="destination" ref="502737033"/>
 					</object>
 					<int key="connectionID">16</int>
 				</object>
@@ -150,7 +177,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="631052728"/>
+						<reference key="source" ref="502737033"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">15</int>
@@ -180,7 +207,8 @@
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="291030852"/>
-							<reference ref="631052728"/>
+							<reference ref="502737033"/>
+							<reference ref="607992117"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -191,8 +219,27 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="631052728"/>
+						<reference key="object" ref="502737033"/>
 						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="607992117"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="136193824"/>
+							<reference ref="743766029"/>
+						</array>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">24</int>
+						<reference key="object" ref="136193824"/>
+						<reference key="parent" ref="607992117"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">25</int>
+						<reference key="object" ref="743766029"/>
+						<reference key="parent" ref="607992117"/>
 					</object>
 				</array>
 			</object>
@@ -202,6 +249,9 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="25.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -209,7 +259,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -218,17 +268,12 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="mySearchBar">UISearchBar</string>
-						<string key="mySearchResultTable">UITableView</string>
 						<string key="myTable">UITableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="mySearchBar">
 							<string key="name">mySearchBar</string>
 							<string key="candidateClassName">UISearchBar</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="mySearchResultTable">
-							<string key="name">mySearchResultTable</string>
-							<string key="candidateClassName">UITableView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="myTable">
 							<string key="name">myTable</string>

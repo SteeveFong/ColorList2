@@ -10,7 +10,6 @@
 #import "ColorListVC.h"
 #import "ColorCell.h"
 #import "ColorList.h"
-#import "Constants.h"
 #import "Color.h"
 
 @interface ColorListVC ()

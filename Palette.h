@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Palette : NSObject
+@interface Palette : ActiveRecord
+@property (strong, nonatomic) NSString * description;
+@property (strong, nonatomic) NSString * title;
+@property (strong, nonatomic) NSString * paletteImageURL;
 
+- (id)initWithDict:(NSDictionary *)currentPalette;
 @end

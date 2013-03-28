@@ -1,20 +1,27 @@
 
-COCOAPODS: 0.16.4
-
-DEPENDENCIES: 
-- AFNetworking (= 0.10.1)
-- SBJson (= 3.1)
-- SVProgressHUD
-- iActiveRecord (= 1.3.0)
+SPEC CHECKSUMS: 
+  MACircleProgressIndicator: dc497a2c68dd930d4aea837b1a732a56ce4bd6d8
+  SBJson: 0c76c1e4ec7c4fbf9c9c0d9fa78cb3c5743cbe9a
+  AFNetworking: df1042246c17373b96f12f04bf5c6e1c25992cd4
+  iActiveRecord: 5dd0ababe9b7ea1764da0d21d9f3fe61c73172ce
+  MACachedImageView: 8f1189a653bd72e9868ae3c62fcd429f76104cbe
+  SVProgressHUD: 98935fbafaf0031df4a9cafca3c66eaf3da06967
 
 PODS: 
 - AFNetworking (0.10.1)
+- MACachedImageView (1.1.0): 
+  - AFNetworking (~> 1.1.0)
+  - MACircleProgressIndicator (~> 1.0.0)
+- MACircleProgressIndicator (1.0.0)
 - SBJson (3.1)
 - SVProgressHUD (0.9)
 - iActiveRecord (1.3.0)
 
-SPEC CHECKSUMS: 
-  iActiveRecord: 5dd0ababe9b7ea1764da0d21d9f3fe61c73172ce
-  SVProgressHUD: 98935fbafaf0031df4a9cafca3c66eaf3da06967
-  SBJson: 0c76c1e4ec7c4fbf9c9c0d9fa78cb3c5743cbe9a
-  AFNetworking: df1042246c17373b96f12f04bf5c6e1c25992cd4
+COCOAPODS: 0.16.4
+
+DEPENDENCIES: 
+- AFNetworking (= 0.10.1)
+- MACachedImageView (= 1.1.0)
+- SBJson (= 3.1)
+- SVProgressHUD
+- iActiveRecord (= 1.3.0)

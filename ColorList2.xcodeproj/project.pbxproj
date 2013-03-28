@@ -28,6 +28,11 @@
 		6C6F1E4517042E3F005B6F76 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E4417042E3F005B6F76 /* User.m */; };
 		6C6F1E49170430FC005B6F76 /* ColorUserDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */; };
 		6C6F1E4A170430FC005B6F76 /* ColorUserDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */; };
+		6C6F1E4E17045D8A005B6F76 /* PaletteListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E4C17045D89005B6F76 /* PaletteListVC.m */; };
+		6C6F1E4F17045D8A005B6F76 /* PaletteListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E4D17045D89005B6F76 /* PaletteListVC.xib */; };
+		6C6F1E5C17046BF0005B6F76 /* PaletteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E5B17046BF0005B6F76 /* PaletteCell.m */; };
+		6C6F1E5E17046C0B005B6F76 /* PaletteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */; };
+		6C6F1E6117046D20005B6F76 /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6017046D20005B6F76 /* Palette.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +70,14 @@
 		6C6F1E46170430FC005B6F76 /* ColorUserDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUserDetailsVC.h; sourceTree = "<group>"; };
 		6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUserDetailsVC.m; sourceTree = "<group>"; };
 		6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorUserDetailsVC.xib; sourceTree = "<group>"; };
+		6C6F1E4B17045D89005B6F76 /* PaletteListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteListVC.h; sourceTree = "<group>"; };
+		6C6F1E4C17045D89005B6F76 /* PaletteListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteListVC.m; sourceTree = "<group>"; };
+		6C6F1E4D17045D89005B6F76 /* PaletteListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaletteListVC.xib; sourceTree = "<group>"; };
+		6C6F1E5A17046BF0005B6F76 /* PaletteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteCell.h; sourceTree = "<group>"; };
+		6C6F1E5B17046BF0005B6F76 /* PaletteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteCell.m; sourceTree = "<group>"; };
+		6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaletteCell.xib; sourceTree = "<group>"; };
+		6C6F1E5F17046D20005B6F76 /* Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
+		6C6F1E6017046D20005B6F76 /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +157,9 @@
 		6C1B98241702B9FB006D0C32 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6C6F1E4B17045D89005B6F76 /* PaletteListVC.h */,
+				6C6F1E4C17045D89005B6F76 /* PaletteListVC.m */,
+				6C6F1E4D17045D89005B6F76 /* PaletteListVC.xib */,
 				6C1B98181702B1A1006D0C32 /* ColorListVC.h */,
 				6C1B98191702B1A1006D0C32 /* ColorListVC.m */,
 				6C1B981B1702B1A1006D0C32 /* ColorListVC.xib */,
@@ -175,6 +191,8 @@
 				6C1B98371702BF5E006D0C32 /* Color.m */,
 				6C6F1E4317042E3F005B6F76 /* User.h */,
 				6C6F1E4417042E3F005B6F76 /* User.m */,
+				6C6F1E5F17046D20005B6F76 /* Palette.h */,
+				6C6F1E6017046D20005B6F76 /* Palette.m */,
 			);
 			name = Model;
 			path = ..;
@@ -186,6 +204,9 @@
 				6C1B98311702BD30006D0C32 /* ColorCell.h */,
 				6C1B98321702BD30006D0C32 /* ColorCell.m */,
 				6C1B98341702BD4C006D0C32 /* ColorCell.xib */,
+				6C6F1E5A17046BF0005B6F76 /* PaletteCell.h */,
+				6C6F1E5B17046BF0005B6F76 /* PaletteCell.m */,
+				6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */,
 			);
 			name = View;
 			path = ..;
@@ -251,6 +272,8 @@
 				6C1B98351702BD4C006D0C32 /* ColorCell.xib in Resources */,
 				6C6F1E331702DB04005B6F76 /* ColorDetailsVC.xib in Resources */,
 				6C6F1E4A170430FC005B6F76 /* ColorUserDetailsVC.xib in Resources */,
+				6C6F1E4F17045D8A005B6F76 /* PaletteListVC.xib in Resources */,
+				6C6F1E5E17046C0B005B6F76 /* PaletteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +310,9 @@
 				6C6F1E321702DB04005B6F76 /* ColorDetailsVC.m in Sources */,
 				6C6F1E4517042E3F005B6F76 /* User.m in Sources */,
 				6C6F1E49170430FC005B6F76 /* ColorUserDetailsVC.m in Sources */,
+				6C6F1E4E17045D8A005B6F76 /* PaletteListVC.m in Sources */,
+				6C6F1E5C17046BF0005B6F76 /* PaletteCell.m in Sources */,
+				6C6F1E6117046D20005B6F76 /* Palette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

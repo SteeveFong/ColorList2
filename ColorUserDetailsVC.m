@@ -21,7 +21,6 @@
 
 @implementation ColorUserDetailsVC
 {
-    NSDictionary * userDetailsDict;
     NSString * myUserName;
 }
 
@@ -38,7 +37,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -70,13 +68,15 @@
     AFJSONRequestOperation * jsonRequest = [AFJSONRequestOperation
                                             JSONRequestOperationWithRequest:req
                                             success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-                                            {                                                
+                                            {
+                                                NSDictionary * userDetailsDict;
                                                 userDetailsDict = (NSDictionary *) JSON[0];
                                                 
                                                 User * user = [[User newRecord] initUserWithDict:userDetailsDict];
                                                 [user save];
-
+                                                
                                                 [self inputValues:user];
+                                                
                                                 [SVProgressHUD showSuccessWithStatus:@"Done"];
                                             }
                                             
@@ -90,6 +90,7 @@
 
 - (void)inputValues:(User *)values
 {
+    NSLog(@"%@", values);
     [_userNameLabel setText:[NSString stringWithFormat:@"%@", [values userName]]];
     [_locationLabel  setText:[NSString stringWithFormat:@"%@", [values location]]];
     [_ratingLabel    setText:[NSString stringWithFormat:@"%@", [values rating]]];

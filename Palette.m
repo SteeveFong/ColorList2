@@ -9,5 +9,16 @@
 #import "Palette.h"
 
 @implementation Palette
-
+-(id)initWithDict:(NSDictionary *)currentColor
+{
+    self = [super init];
+    
+    if (self) {
+        self.id          = currentColor[@"id"];
+        _description     = currentColor[@"userName"];
+        _title           = currentColor[@"title"];
+        _paletteImageURL = currentColor[@"imageUrl"];
+    }
+    return self;
+}
 @end

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PaletteListVC : UIViewController
+<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+
+- (void)fetchEntries:(NSString *) urlStr;
+- (void)filterContentForSearchText:(NSString *) searchText;
 
 @end

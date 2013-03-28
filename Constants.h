@@ -7,5 +7,6 @@
 //
 
 #define COLORLISTURL @"http://www.colourlovers.com/api/colors/new?format=json"
+#define PALETTELISTURL @"http://www.colourlovers.com/api/palettes/new?format=json"
 #define networkNotificationActivityOn()  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES]
 #define networkNotificationActivityOff() [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO]

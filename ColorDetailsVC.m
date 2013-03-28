@@ -9,6 +9,7 @@
 #import "UIColor+hexToColor.h"
 #import "ColorUserDetailsVC.h"
 #import "ColorDetailsVC.h"
+#import "Palette.h"
 #import "Color.h"
 
 @implementation ColorDetailsVC
@@ -28,6 +29,17 @@
     
     if (self) {
         _myColor = currentColor;
+    }
+    
+    return self;
+}
+
+-(id)initWithPalette:(Palette *)currentPalette
+{
+    self = [super init];
+    
+    if (self) {
+        _myPalette = currentPalette;
     }
     
     return self;

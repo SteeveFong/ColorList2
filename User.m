@@ -29,10 +29,10 @@
     self = [super init];
     
     if (self) {
-        _userName  = [array valueForKey:@"userName"];
-        _location  = [array valueForKey:@"location"];
-        _rating    = [array valueForKey:@"rating"];
-        _numColors = [array valueForKey:@"numColors"];
+        _userName  = [[array objectAtIndex:0] valueForKey:@"userName"];
+        _location  = [[array objectAtIndex:0] valueForKey:@"location"];
+        _rating    = [[array objectAtIndex:0] valueForKey:@"rating"];
+        _numColors = [[array objectAtIndex:0] valueForKey:@"numColors"];
     }
     
     return self;
