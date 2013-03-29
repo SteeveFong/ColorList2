@@ -51,23 +51,27 @@
     // Do any additional setup after loading the view from its nib.
     [[self navigationController] setNavigationBarHidden:NO];
     
-    [_descriptionLabel setText:_myColor.description];
-    [_titleLabel setText:_myColor.title];
-    [_hexColorLabel setText:_myColor.colorHex];
-    [_colorView setBackgroundColor:[UIColor colorFromHexString:_myColor.colorHex]];
-    [_hexColorLabel setTextColor:[UIColor invertedColorFromHexString:_myColor.colorHex]];
+    if (_myColor) {
+        [_descriptionLabel setText:_myColor.description];
+        [_titleLabel setText:_myColor.title];
+        [_hexColorLabel setText:_myColor.colorHex];
+        [_colorView setBackgroundColor:[UIColor colorFromHexString:_myColor.colorHex]];
+        [_hexColorLabel setTextColor:[UIColor invertedColorFromHexString:_myColor.colorHex]];
+    }
+    else {
+        [_descriptionLabel setText:_myPalette.description];
+        [_titleLabel setText:_myPalette.title];
+    }
+}
+- (IBAction)buttonPressed:(id)sender {
+    ColorUserDetailsVC *vc = [[ColorUserDetailsVC alloc] initWithUserName:_descriptionLabel.text];
+    [[self navigationController] pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)userDetails:(id)sender {
-    ColorUserDetailsVC *vc = [[ColorUserDetailsVC alloc] initWithUserName:_descriptionLabel.text];
-    
-    [[self navigationController] pushViewController:vc animated:YES];
 }
 
 @end

@@ -36,10 +36,7 @@
     self = [super init];
     
     if (self) {
-        MACachedImageView * cachedImageView = [[MACachedImageView alloc] initWithFrame:CGRectMake(0,0,60,60)];
         NSURL *url = [NSURL URLWithString:currentPalette.paletteImageURL];
-        
-        [cachedImageView setImageWithURL:url];
         
         [_titleLabel setText:currentPalette.title];
         [_descriptionLabel setText:currentPalette.description];

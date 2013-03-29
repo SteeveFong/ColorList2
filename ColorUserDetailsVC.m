@@ -46,8 +46,10 @@
     
     NSArray * userExistArray = [[[User lazyFetcher] whereField:@"userName" equalToValue:myUserName] fetchRecords];
     
-    if (userExistArray.count == 0)
+    if (userExistArray.count == 0) {
+        NSLog(@"%@", [NSString stringWithFormat:@"http://www.colourlovers.com/api/lover/%@?format=json", myUserName]);
         [self fetchEntries:[NSString stringWithFormat:@"http://www.colourlovers.com/api/lover/%@?format=json", myUserName]];
+    }
     else {
         User * myUser = [[User alloc] initUserWithArray:userExistArray];
         [self inputValues:myUser];
@@ -72,12 +74,14 @@
                                                 NSDictionary * userDetailsDict;
                                                 userDetailsDict = (NSDictionary *) JSON[0];
                                                 
-                                                User * user = [[User newRecord] initUserWithDict:userDetailsDict];
-                                                [user save];
-                                                
-                                                [self inputValues:user];
-                                                
-                                                [SVProgressHUD showSuccessWithStatus:@"Done"];
+                                                if (userDetailsDict) {
+                                                    User * user = [[User newRecord] initUserWithDict:userDetailsDict];
+                                                    [user save];
+                                                    
+                                                    [self inputValues:user];
+                                                    
+                                                    [SVProgressHUD showSuccessWithStatus:@"Done"];
+                                                }
                                             }
                                             
                                             failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)

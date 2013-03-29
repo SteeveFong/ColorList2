@@ -23,11 +23,20 @@
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mainView];
     UINavigationController * nav2 = [[UINavigationController alloc] initWithRootViewController:paletteVw];
     
-    UITabBarController * tabBar = [[UITabBarController alloc] init];
+    UITabBarController * tabBarController = [[UITabBarController alloc] init];
+//    UITabBar * tabBarColor = [tabBarController tabBar];
+//    [tabBarColor setBackgroundImage:[UIImage imageNamed:@"color.png"]];
+
+    UITabBarItem * tabBarColor = [[UITabBarItem alloc] initWithTitle:@"Color" image:[UIImage imageNamed:@"color.png"] tag:0];
     
-    [tabBar setViewControllers:@[nav, nav2] animated:YES];
+    UITabBarItem * tabBarPalette = [[UITabBarItem alloc] initWithTitle:@"Palette" image:[UIImage imageNamed:@"palette.png"] tag:0];
     
-    self.window.rootViewController = tabBar;
+    [mainView setTabBarItem:tabBarColor];
+    [paletteVw setTabBarItem:tabBarPalette];
+    
+    [tabBarController setViewControllers:@[nav, nav2] animated:YES];
+    
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

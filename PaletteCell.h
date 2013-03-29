@@ -10,9 +10,9 @@
 @class Palette;
 
 @interface PaletteCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel * titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel * descriptionLabel;
-@property (strong, nonatomic) IBOutlet UIImageView * paletteImageView;
+@property (weak, nonatomic) IBOutlet UILabel * titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * descriptionLabel;
+@property (weak, nonatomic) IBOutlet MACachedImageView * paletteImageView;
 
 - (id)initFromPalette:(Palette *)currentPalette;
 

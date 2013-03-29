@@ -33,6 +33,15 @@
 		6C6F1E5C17046BF0005B6F76 /* PaletteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E5B17046BF0005B6F76 /* PaletteCell.m */; };
 		6C6F1E5E17046C0B005B6F76 /* PaletteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */; };
 		6C6F1E6117046D20005B6F76 /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6017046D20005B6F76 /* Palette.m */; };
+		6C6F1E6417055C6E005B6F76 /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6217055C6E005B6F76 /* color.png */; };
+		6C6F1E6517055C6E005B6F76 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6317055C6E005B6F76 /* palette.png */; };
+		6C6F1E6817056124005B6F76 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6717056124005B6F76 /* UICustomButton.m */; };
+		6C6F1E6A170561C0005B6F76 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E69170561C0005B6F76 /* button.png */; };
+		6C6F1E6D1705708B005B6F76 /* Pattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6C1705708B005B6F76 /* Pattern.m */; };
+		6C6F1E7017057191005B6F76 /* PatternCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6F17057190005B6F76 /* PatternCell.m */; };
+		6C6F1E72170571B2005B6F76 /* PatternCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E71170571B2005B6F76 /* PatternCell.xib */; };
+		6C6F1E7617057281005B6F76 /* PatternVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E7417057280005B6F76 /* PatternVC.m */; };
+		6C6F1E7717057281005B6F76 /* PatternVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E7517057280005B6F76 /* PatternVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +87,19 @@
 		6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaletteCell.xib; sourceTree = "<group>"; };
 		6C6F1E5F17046D20005B6F76 /* Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
 		6C6F1E6017046D20005B6F76 /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
+		6C6F1E6217055C6E005B6F76 /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
+		6C6F1E6317055C6E005B6F76 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
+		6C6F1E6617056123005B6F76 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		6C6F1E6717056124005B6F76 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		6C6F1E69170561C0005B6F76 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		6C6F1E6B1705708B005B6F76 /* Pattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pattern.h; sourceTree = "<group>"; };
+		6C6F1E6C1705708B005B6F76 /* Pattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pattern.m; sourceTree = "<group>"; };
+		6C6F1E6E17057190005B6F76 /* PatternCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternCell.h; sourceTree = "<group>"; };
+		6C6F1E6F17057190005B6F76 /* PatternCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternCell.m; sourceTree = "<group>"; };
+		6C6F1E71170571B2005B6F76 /* PatternCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatternCell.xib; sourceTree = "<group>"; };
+		6C6F1E7317057280005B6F76 /* PatternVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternVC.h; sourceTree = "<group>"; };
+		6C6F1E7417057280005B6F76 /* PatternVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternVC.m; sourceTree = "<group>"; };
+		6C6F1E7517057280005B6F76 /* PatternVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatternVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +171,9 @@
 				6C1B98121702B1A1006D0C32 /* Default.png */,
 				6C1B98141702B1A1006D0C32 /* Default@2x.png */,
 				6C1B98161702B1A1006D0C32 /* Default-568h@2x.png */,
+				6C6F1E6217055C6E005B6F76 /* color.png */,
+				6C6F1E6317055C6E005B6F76 /* palette.png */,
+				6C6F1E69170561C0005B6F76 /* button.png */,
 			);
 			name = "Supporting Files";
 			path = ColorList2;
@@ -169,6 +194,9 @@
 				6C6F1E46170430FC005B6F76 /* ColorUserDetailsVC.h */,
 				6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */,
 				6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */,
+				6C6F1E7317057280005B6F76 /* PatternVC.h */,
+				6C6F1E7417057280005B6F76 /* PatternVC.m */,
+				6C6F1E7517057280005B6F76 /* PatternVC.xib */,
 			);
 			name = ViewController;
 			path = ..;
@@ -193,6 +221,8 @@
 				6C6F1E4417042E3F005B6F76 /* User.m */,
 				6C6F1E5F17046D20005B6F76 /* Palette.h */,
 				6C6F1E6017046D20005B6F76 /* Palette.m */,
+				6C6F1E6B1705708B005B6F76 /* Pattern.h */,
+				6C6F1E6C1705708B005B6F76 /* Pattern.m */,
 			);
 			name = Model;
 			path = ..;
@@ -207,6 +237,11 @@
 				6C6F1E5A17046BF0005B6F76 /* PaletteCell.h */,
 				6C6F1E5B17046BF0005B6F76 /* PaletteCell.m */,
 				6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */,
+				6C6F1E6617056123005B6F76 /* UICustomButton.h */,
+				6C6F1E6717056124005B6F76 /* UICustomButton.m */,
+				6C6F1E6E17057190005B6F76 /* PatternCell.h */,
+				6C6F1E6F17057190005B6F76 /* PatternCell.m */,
+				6C6F1E71170571B2005B6F76 /* PatternCell.xib */,
 			);
 			name = View;
 			path = ..;
@@ -274,6 +309,11 @@
 				6C6F1E4A170430FC005B6F76 /* ColorUserDetailsVC.xib in Resources */,
 				6C6F1E4F17045D8A005B6F76 /* PaletteListVC.xib in Resources */,
 				6C6F1E5E17046C0B005B6F76 /* PaletteCell.xib in Resources */,
+				6C6F1E6417055C6E005B6F76 /* color.png in Resources */,
+				6C6F1E6517055C6E005B6F76 /* palette.png in Resources */,
+				6C6F1E6A170561C0005B6F76 /* button.png in Resources */,
+				6C6F1E72170571B2005B6F76 /* PatternCell.xib in Resources */,
+				6C6F1E7717057281005B6F76 /* PatternVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +353,10 @@
 				6C6F1E4E17045D8A005B6F76 /* PaletteListVC.m in Sources */,
 				6C6F1E5C17046BF0005B6F76 /* PaletteCell.m in Sources */,
 				6C6F1E6117046D20005B6F76 /* Palette.m in Sources */,
+				6C6F1E6817056124005B6F76 /* UICustomButton.m in Sources */,
+				6C6F1E6D1705708B005B6F76 /* Pattern.m in Sources */,
+				6C6F1E7017057191005B6F76 /* PatternCell.m in Sources */,
+				6C6F1E7617057281005B6F76 /* PatternVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

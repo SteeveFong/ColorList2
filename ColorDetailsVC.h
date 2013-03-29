@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel * titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel * hexColorLabel;
 @property (weak, nonatomic) IBOutlet UILabel * descriptionLabel;
-@property (weak, nonatomic) IBOutlet UIButton *userButton;
+@property (weak, nonatomic) IBOutlet UICustomButton *userButton;
 
 @property (strong, nonatomic) Color * myColor;
 @property (strong, nonatomic) Palette * myPalette;
