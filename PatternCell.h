@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Pattern;
 
-@interface PatternCell : UIView
-@property (weak, nonatomic) IBOutlet UIImageView * imgView;
+@interface PatternCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView * imageView;
+
+- (id)initFromPattern:(Pattern *)currentPattern;
+
 @end

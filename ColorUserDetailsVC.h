@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class User;
 
-@interface ColorUserDetailsVC : UIViewController
+@interface ColorUserDetailsVC : KAViewController
 
 - (id)initWithUserName:(NSString *)userName;
 - (void)fetchEntries:(NSString *)urlStr;

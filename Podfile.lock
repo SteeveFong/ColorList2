@@ -1,14 +1,28 @@
 
+DEPENDENCIES: 
+- AFNetworking (= 0.10.1)
+- KANibHelper (from `https://github.com/kirualex/KANibHelper.git')
+- MACachedImageView (= 1.1.0)
+- SBJson (= 3.1)
+- SVProgressHUD
+- iActiveRecord (= 1.3.0)
+
 SPEC CHECKSUMS: 
-  MACircleProgressIndicator: dc497a2c68dd930d4aea837b1a732a56ce4bd6d8
   SBJson: 0c76c1e4ec7c4fbf9c9c0d9fa78cb3c5743cbe9a
-  AFNetworking: df1042246c17373b96f12f04bf5c6e1c25992cd4
-  iActiveRecord: 5dd0ababe9b7ea1764da0d21d9f3fe61c73172ce
-  MACachedImageView: 8f1189a653bd72e9868ae3c62fcd429f76104cbe
   SVProgressHUD: 98935fbafaf0031df4a9cafca3c66eaf3da06967
+  KANibHelper: 664a1554bac8d619de038e248f0e5422a360084b
+  AFNetworking: df1042246c17373b96f12f04bf5c6e1c25992cd4
+  MACachedImageView: 8f1189a653bd72e9868ae3c62fcd429f76104cbe
+  MACircleProgressIndicator: dc497a2c68dd930d4aea837b1a732a56ce4bd6d8
+  iActiveRecord: 5dd0ababe9b7ea1764da0d21d9f3fe61c73172ce
+
+EXTERNAL SOURCES: 
+  KANibHelper: 
+    :git: https://github.com/kirualex/KANibHelper.git
 
 PODS: 
 - AFNetworking (0.10.1)
+- KANibHelper (0.1)
 - MACachedImageView (1.1.0): 
   - AFNetworking (~> 1.1.0)
   - MACircleProgressIndicator (~> 1.0.0)
@@ -18,10 +32,3 @@ PODS:
 - iActiveRecord (1.3.0)
 
 COCOAPODS: 0.16.4
-
-DEPENDENCIES: 
-- AFNetworking (= 0.10.1)
-- MACachedImageView (= 1.1.0)
-- SBJson (= 3.1)
-- SVProgressHUD
-- iActiveRecord (= 1.3.0)

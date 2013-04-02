@@ -38,10 +38,11 @@
 		6C6F1E6817056124005B6F76 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6717056124005B6F76 /* UICustomButton.m */; };
 		6C6F1E6A170561C0005B6F76 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E69170561C0005B6F76 /* button.png */; };
 		6C6F1E6D1705708B005B6F76 /* Pattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6C1705708B005B6F76 /* Pattern.m */; };
-		6C6F1E7017057191005B6F76 /* PatternCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E6F17057190005B6F76 /* PatternCell.m */; };
-		6C6F1E72170571B2005B6F76 /* PatternCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E71170571B2005B6F76 /* PatternCell.xib */; };
 		6C6F1E7617057281005B6F76 /* PatternVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E7417057280005B6F76 /* PatternVC.m */; };
 		6C6F1E7717057281005B6F76 /* PatternVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E7517057280005B6F76 /* PatternVC.xib */; };
+		6C6F1E7A170578E4005B6F76 /* PatternCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F1E79170578E3005B6F76 /* PatternCell.m */; };
+		6C6F1E7E1705791D005B6F76 /* PatternCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E7D1705791C005B6F76 /* PatternCell.xib */; };
+		6C6F1E87170ACB5A005B6F76 /* ColorUserDetailsVC_4in.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F1E86170ACB5A005B6F76 /* ColorUserDetailsVC_4in.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,12 +95,13 @@
 		6C6F1E69170561C0005B6F76 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		6C6F1E6B1705708B005B6F76 /* Pattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pattern.h; sourceTree = "<group>"; };
 		6C6F1E6C1705708B005B6F76 /* Pattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pattern.m; sourceTree = "<group>"; };
-		6C6F1E6E17057190005B6F76 /* PatternCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternCell.h; sourceTree = "<group>"; };
-		6C6F1E6F17057190005B6F76 /* PatternCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternCell.m; sourceTree = "<group>"; };
-		6C6F1E71170571B2005B6F76 /* PatternCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatternCell.xib; sourceTree = "<group>"; };
 		6C6F1E7317057280005B6F76 /* PatternVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternVC.h; sourceTree = "<group>"; };
 		6C6F1E7417057280005B6F76 /* PatternVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternVC.m; sourceTree = "<group>"; };
 		6C6F1E7517057280005B6F76 /* PatternVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatternVC.xib; sourceTree = "<group>"; };
+		6C6F1E78170578E3005B6F76 /* PatternCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternCell.h; sourceTree = "<group>"; };
+		6C6F1E79170578E3005B6F76 /* PatternCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternCell.m; sourceTree = "<group>"; };
+		6C6F1E7D1705791C005B6F76 /* PatternCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatternCell.xib; sourceTree = "<group>"; };
+		6C6F1E86170ACB5A005B6F76 /* ColorUserDetailsVC_4in.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorUserDetailsVC_4in.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				6C6F1E46170430FC005B6F76 /* ColorUserDetailsVC.h */,
 				6C6F1E47170430FC005B6F76 /* ColorUserDetailsVC.m */,
 				6C6F1E48170430FC005B6F76 /* ColorUserDetailsVC.xib */,
+				6C6F1E86170ACB5A005B6F76 /* ColorUserDetailsVC_4in.xib */,
 				6C6F1E7317057280005B6F76 /* PatternVC.h */,
 				6C6F1E7417057280005B6F76 /* PatternVC.m */,
 				6C6F1E7517057280005B6F76 /* PatternVC.xib */,
@@ -239,9 +242,9 @@
 				6C6F1E5D17046C0B005B6F76 /* PaletteCell.xib */,
 				6C6F1E6617056123005B6F76 /* UICustomButton.h */,
 				6C6F1E6717056124005B6F76 /* UICustomButton.m */,
-				6C6F1E6E17057190005B6F76 /* PatternCell.h */,
-				6C6F1E6F17057190005B6F76 /* PatternCell.m */,
-				6C6F1E71170571B2005B6F76 /* PatternCell.xib */,
+				6C6F1E78170578E3005B6F76 /* PatternCell.h */,
+				6C6F1E79170578E3005B6F76 /* PatternCell.m */,
+				6C6F1E7D1705791C005B6F76 /* PatternCell.xib */,
 			);
 			name = View;
 			path = ..;
@@ -312,8 +315,9 @@
 				6C6F1E6417055C6E005B6F76 /* color.png in Resources */,
 				6C6F1E6517055C6E005B6F76 /* palette.png in Resources */,
 				6C6F1E6A170561C0005B6F76 /* button.png in Resources */,
-				6C6F1E72170571B2005B6F76 /* PatternCell.xib in Resources */,
 				6C6F1E7717057281005B6F76 /* PatternVC.xib in Resources */,
+				6C6F1E7E1705791D005B6F76 /* PatternCell.xib in Resources */,
+				6C6F1E87170ACB5A005B6F76 /* ColorUserDetailsVC_4in.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +359,8 @@
 				6C6F1E6117046D20005B6F76 /* Palette.m in Sources */,
 				6C6F1E6817056124005B6F76 /* UICustomButton.m in Sources */,
 				6C6F1E6D1705708B005B6F76 /* Pattern.m in Sources */,
-				6C6F1E7017057191005B6F76 /* PatternCell.m in Sources */,
 				6C6F1E7617057281005B6F76 /* PatternVC.m in Sources */,
+				6C6F1E7A170578E4005B6F76 /* PatternCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

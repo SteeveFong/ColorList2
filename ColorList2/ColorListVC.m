@@ -13,8 +13,8 @@
 #import "Color.h"
 
 @interface ColorListVC ()
-    @property (strong, nonatomic) IBOutlet UITableView * myTable;
-    @property (strong, nonatomic) IBOutlet UISearchBar * mySearchBar;
+    @property (weak, nonatomic) IBOutlet UITableView * myTable;
+    @property (weak, nonatomic) IBOutlet UISearchBar * mySearchBar;
 @end
 
 @implementation ColorListVC

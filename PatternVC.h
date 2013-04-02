@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PatternVC : UIViewController
+<UICollectionViewDelegate, UICollectionViewDataSource>
+
+- (void)fetchEntries:(NSString *) urlStr;
+- (void)filterContentForSearchText:(NSString *) searchText;
 
 @end

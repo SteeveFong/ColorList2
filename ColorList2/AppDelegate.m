@@ -10,6 +10,7 @@
 
 #import "ColorListVC.h"
 #import "PaletteListVC.h"
+#import "PatternVC.h"
 
 @implementation AppDelegate
 
@@ -19,9 +20,11 @@
     // Override point for customization after application launch.
     ColorListVC * mainView   = [[ColorListVC alloc] initWithNibName:@"ColorListVC" bundle:nil];
     PaletteListVC *paletteVw = [[PaletteListVC alloc] init];
+    PatternVC *patternVw = [[PatternVC alloc] init];
     
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mainView];
     UINavigationController * nav2 = [[UINavigationController alloc] initWithRootViewController:paletteVw];
+    UINavigationController * nav3 = [[UINavigationController alloc] initWithRootViewController:patternVw];
     
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
 //    UITabBar * tabBarColor = [tabBarController tabBar];
@@ -31,10 +34,13 @@
     
     UITabBarItem * tabBarPalette = [[UITabBarItem alloc] initWithTitle:@"Palette" image:[UIImage imageNamed:@"palette.png"] tag:0];
     
+    UITabBarItem * tabBarPattern = [[UITabBarItem alloc] initWithTitle:@"Pattern" image:[UIImage imageNamed:@"palette.png"] tag:0];
+
     [mainView setTabBarItem:tabBarColor];
     [paletteVw setTabBarItem:tabBarPalette];
+    [patternVw setTabBarItem:tabBarPattern];
     
-    [tabBarController setViewControllers:@[nav, nav2] animated:YES];
+    [tabBarController setViewControllers:@[nav, nav2, nav3] animated:YES];
     
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];

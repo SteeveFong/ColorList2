@@ -7,6 +7,7 @@
 //
 
 #import "PatternCell.h"
+#import "Pattern.h"
 
 @implementation PatternCell
 
@@ -15,6 +16,20 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PatternCell" owner:self options:nil];
+        self = nib[0];
+    }
+    return self;
+}
+
+- (id)initFromPattern:(Pattern *)currentPattern
+{
+    self = [super init];
+    
+    if (self) {
+        NSURL * url = [[NSURL alloc] initWithString:currentPattern.imageUrl];
+
+        [_imageView setImageWithURL:url];
     }
     return self;
 }
